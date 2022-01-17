@@ -83,10 +83,20 @@
 
 #Functions
 
-def sum(num1, num2):
-    def another_func(n1, n2):
-        return n1 + n2
-    return another_func(num1, num2)
+# def sum(num1, num2):
+#     def another_func(n1, n2):
+#         return n1 + n2
+#     return another_func(num1, num2)
+#
+# total = sum(10, 20)
+# print(total)
 
-total = sum(10, 20)
-print(total)
+# *args **kwargs
+
+def super_func(*args, **kwargs):
+    total = 0
+    for items in kwargs.values():
+        total += items
+    return sum(args) + total
+
+print(super_func(1,2,3,4,5, num1=5, num2=10))
