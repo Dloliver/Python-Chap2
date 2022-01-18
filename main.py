@@ -92,11 +92,29 @@
 # print(total)
 
 # *args **kwargs
+#
+# def super_func(*args, **kwargs):
+#     total = 0
+#     for items in kwargs.values():
+#         total += items
+#     return sum(args) + total
+#
+# print(super_func(1,2,3,4,5, num1=5, num2=10))
 
-def super_func(*args, **kwargs):
-    total = 0
-    for items in kwargs.values():
-        total += items
-    return sum(args) + total
+#walrus operator
 
-print(super_func(1,2,3,4,5, num1=5, num2=10))
+a = 'helloooooooooooooo'
+
+if (len(a) > 10):
+    print(f"too long {len(a)} elements")
+
+#same problem with walrus operator
+
+if ((n:= len(a)) > 10):
+    print(f"too long {n} elements")
+
+while ((n := len(a)) > 1):
+    print(n)
+    a = a[:-1]
+
+print(a)
