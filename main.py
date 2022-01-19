@@ -103,18 +103,47 @@
 
 #walrus operator
 
-a = 'helloooooooooooooo'
+# a = 'helloooooooooooooo'
+#
+# if (len(a) > 10):
+#     print(f"too long {len(a)} elements")
+#
+# #same problem with walrus operator
+#
+# if ((n:= len(a)) > 10):
+#     print(f"too long {n} elements")
+#
+# while ((n := len(a)) > 1):
+#     print(n)
+#     a = a[:-1]
+#
+# print(a)
 
-if (len(a) > 10):
-    print(f"too long {len(a)} elements")
+#OOP
+# clss BigObject: #Class
+#     #code
+#     pass
+# obj1 = BigObject() #instanciate
+# print(type(None))
+# print(type(True))
+# print(type(5))
+# print(type(5.5))
+# print(type('hi'))
+# print(type([]))
+# print(type(()))
+# print(type({}))
+# print(type(obj1))
 
-#same problem with walrus operator
+class PlayerCharacter:
+    def __init__(self, name, age):  #__init__ constructor Method
+        self.name = name
+        self.age = age
 
-if ((n:= len(a)) > 10):
-    print(f"too long {n} elements")
+    def run(self):
+        print('run')
 
-while ((n := len(a)) > 1):
-    print(n)
-    a = a[:-1]
+player1 = PlayerCharacter('Dennis', 32)
+player2 = PlayerCharacter('Christina', 29)
 
-print(a)
+print(player1.name)
+print(player2.age)
